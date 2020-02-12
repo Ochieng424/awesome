@@ -3,14 +3,18 @@
         <div class="container">
             <div class="row align-items-center" style="padding-top: 50px">
                 <div class="col-lg-5 ml-auto d-none d-lg-block">
-                    <img src="/img/contact.svg" alt="img" style="width: 350px;" />
+                    <img src="/img/contact.svg" alt="img" style="width: 350px;"/>
                 </div>
                 <div class="col-lg-6">
-                    <span class="text-primary"><i class="fa fa-envelope" style="font-size: 25px;"></i> </span>
-                    <span class="ml-2" style="font-size: 25px;">ochieng.derrick001@gmail.com</span>
-                    <br>
-                    <span class="text-primary"><i class="fa fa-phone" style="font-size: 25px;"></i> </span>
-                    <span class="ml-2" style="font-size: 25px;">0715810055</span>
+                    <h1 style="color: #355841;">Contact Me</h1>
+                    <hr>
+                    <address>
+                        <abbr title="Phone"><i class="fa fa-phone" style="font-size: 25px; color: #355841;"></i></abbr>
+                        <span style="font-size: 25px; color: #4881fb" class="ml-4">0715810055</span>
+                        <br>
+                        <abbr title="Email"><i class="fa fa-envelope" style="font-size: 25px; color: #355841;"></i> </abbr>
+                        <a class="ml-4 mail" style="font-size: 25px" href="mailto:ochieng.derrick001@gmail.com">ochieng.derrick001@gmail.com</a>
+                    </address>
                 </div>
             </div>
         </div>
@@ -32,5 +36,10 @@
 </script>
 
 <style scoped>
-
+.mail{
+    text-decoration: none;
+}
+    .mail:hover{
+        text-decoration: none;
+    }
 </style>
