@@ -2,7 +2,7 @@
     <div class="container" style="padding-top: 50px">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-4" v-for="project in projects.data" :key="project.id">
+                <div class="col-sm-4 mb-4" v-for="project in projects.data" :key="project.id">
                     <div class="card">
                         <img :src="project.image" class="card-img-top" :alt="project.title">
                         <div class="card-body">
