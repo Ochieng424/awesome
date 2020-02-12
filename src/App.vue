@@ -1,32 +1,82 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      style="padding: 20px 10px"
+    >
+      <router-link to="/" class="navbar-brand">
+        <img
+                src="/img/programmer.svg"
+                alt="img"
+                style="width: 35px;"
+        />
+        Derrick Ochieng
+      </router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link"
+              >Home</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link to="/expertise" class="nav-link">Expertise</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/projects" class="nav-link">Projects</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact" class="nav-link">Contact</router-link>
+          </li>
+          <li class="nav-item dropdown" v-if="$auth.check()">
+            <a
+              id="navbarDropdown"
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {{ $auth.user().name }}
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="navbarDropdown"
+            >
+              <router-link to="/project/manage" class="dropdown-item">Projects</router-link>
+              <router-link to="/profile" class="dropdown-item"
+                >Profile</router-link
+              >
+              <a class="dropdown-item" href="#" @click.prevent="$auth.logout()"
+                >Logout</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <vue-page-transition name="fade-in-right">
     <router-view />
+    </vue-page-transition>
+    <footer class="text-muted mt-4" style="background-color: #f4f4f4; padding: 20px">
+      <div class="container" >
+        <p>© Ochieng!</p>
+      </div>
+    </footer>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>
