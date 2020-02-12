@@ -73,6 +73,11 @@
     </vue-page-transition>
     <footer class="text-muted mt-4" style="background-color: #f4f4f4; padding: 20px">
       <div class="container" >
+        <p>Made with
+         <router-link to="/login">
+           <i class="fa fa-heart text-danger"></i>
+         </router-link>
+        </p>
         <p>© {{new Date().getFullYear()}} Ochieng!</p>
       </div>
     </footer>
