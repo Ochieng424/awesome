@@ -7,7 +7,7 @@
           
         </p>
         <p>
-        	<button type="button" class="btn btn-outline-success">
+        	<button type="button" class="btn btn-outline-success" @click="download">
         		<i class="fa fa-download"></i>
         	  Resume
             </button>
@@ -69,6 +69,17 @@ export default {
      }
   },
   methods:{
+    download() {
+      this.axios.get("/download", {responseType: 'blob'})
+              .then((response) => {
+                var fileURL = window.URL.createObjectURL(new Blob([response.data]));
+                var fileLink = document.createElement('a');
+                fileLink.href = fileURL;
+                fileLink.setAttribute('download', 'Ochieng-Derrick.pdf');
+                document.body.appendChild(fileLink);
+                fileLink.click();
+              });
+    },
     getDetails(){
         this.axios.get("details").then(({data}) => ([this.details = data]));
     },

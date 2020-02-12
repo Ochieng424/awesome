@@ -73,7 +73,7 @@
     </vue-page-transition>
     <footer class="text-muted mt-4" style="background-color: #f4f4f4; padding: 20px">
       <div class="container" >
-        <p>© Ochieng!</p>
+        <p>© {{new Date().getFullYear()}} Ochieng!</p>
       </div>
     </footer>
   </div>

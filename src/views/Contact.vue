@@ -10,7 +10,7 @@
                     <hr>
                     <address>
                         <abbr title="Phone"><i class="fa fa-phone" style="font-size: 25px; color: #355841;"></i></abbr>
-                        <span style="font-size: 25px; color: #4881fb" class="ml-4">0715810055</span>
+                        <span style="font-size: 25px; color: #2a6dfb" class="ml-4">0715810055</span>
                         <br>
                         <abbr title="Email"><i class="fa fa-envelope" style="font-size: 25px; color: #355841;"></i> </abbr>
                         <a class="ml-4 mail" style="font-size: 25px" href="mailto:ochieng.derrick001@gmail.com">ochieng.derrick001@gmail.com</a>
