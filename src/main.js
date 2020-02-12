@@ -22,7 +22,7 @@ window.toast = toast;
 window.Fire = new Vue();
 
 Vue.use(VueAxios, axios);
-axios.defaults.baseURL = "http://localhost:8000/api/v1";
+axios.defaults.baseURL = "http://personal.artmazing.co.ke/api/v1";
 // Vue.http.options.root = "http://localhost:8000/api/v1";
 
 // websanova
