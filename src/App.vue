@@ -32,7 +32,7 @@
             >
           </li>
           <li class="nav-item">
-            <router-link to="/expertise" class="nav-link">Expertise</router-link>
+            <router-link to="/expertise" class="nav-link">Stack</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/projects" class="nav-link">Projects</router-link>
