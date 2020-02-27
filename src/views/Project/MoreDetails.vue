@@ -10,7 +10,7 @@
             <div class="row" style="padding-top: 70px">
                 <div class="col-sm-5 mb-3 pl-4 pr-4">
                     <div class="row">
-                        <img :src="details.image" class="card-img img-fluid mx-auto" style="width: 450px;">
+                        <img v-lazy="details.image" class="card-img img-fluid mx-auto" style="width: 450px;">
                     </div>
                 </div>
                 <div class="col-sm-7">
