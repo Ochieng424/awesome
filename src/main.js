@@ -46,8 +46,12 @@ window.Form = Form;
 Vue.component(HasError.name, HasError);
 Vue.component(AlertError.name, AlertError);
 
+import VueLazyload from "vue-lazyload"
+
+Vue.use(VueLazyload);
+
 import NProgress from "nprogress";
-import 'nprogress/nprogress.css';
+import "nprogress/nprogress.css";
 
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.

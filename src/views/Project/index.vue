@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-4 mb-4" v-for="project in projects.data" :key="project.id">
                     <div class="card">
-                        <img :src="project.image" class="card-img-top" :alt="project.title">
+                        <img v-lazy="project.image" class="card-img-top" :alt="project.title">
                         <div class="card-body">
                             <h5 class="card-title">{{project.title}}</h5>
                             <router-link :to="{path: '/projects/' +project.ref+'/more'}" class="btn btn-sm btn-primary">More</router-link>
